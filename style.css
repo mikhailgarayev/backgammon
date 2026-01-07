@@ -1,0 +1,31 @@
+:root{
+  --bg:#0b1220;
+  --panel:#0f1a2a;
+  --accent:#00B2FF;
+  --text:#e6f0ff;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body,#app{height:100%; margin:0; background:linear-gradient(180deg,#07101a 0%, #081827 100%); color:var(--text)}
+header{display:flex;gap:16px;align-items:center;padding:18px 24px}
+h1{margin:0;font-size:20px}
+#roomControls{display:flex;gap:8px}
+#roomControls input{padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:#08121a;color:var(--text)}
+button{padding:8px 12px;border-radius:10px;border:none;background:var(--accent);color:#032233;cursor:pointer;font-weight:600}
+button:disabled{opacity:.5;cursor:not-allowed}
+main{padding:16px 24px;display:flex;flex-direction:column;gap:12px}
+#status{font-size:14px;margin-bottom:6px}
+.hidden{display:none}
+#boardWrap{display:flex;gap:16px;align-items:flex-start}
+#board{background:linear-gradient(180deg,#e0cfa0,#c9a86b);border-radius:12px;box-shadow:0 10px 30px rgba(2,6,12,0.6)}
+#ui{display:flex;flex-direction:column;gap:8px;padding:8px;}
+#diceVal{font-weight:700;font-size:20px;margin-top:6px}
+#turnPlayer{font-weight:700}
+#log{margin-top:12px;color:#cfe8ff;background:rgba(255,255,255,0.03);padding:8px;border-radius:8px;max-height:140px;overflow:auto}
+footer{padding:12px 24px;font-size:12px;color:rgba(255,255,255,0.5)}
+@media (max-width:900px){
+  #board{width:100%;height:auto}
+  canvas{max-width:100%;height:auto}
+  #boardWrap{flex-direction:column;align-items:center}
+}
