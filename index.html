@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Онлайн нарды (Backgammon)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Онлайн нарды</h1>
+      <div id="roomControls">
+        <input id="roomInput" placeholder="ID комнаты (оставь пустым — сгенерировать)" />
+        <button id="createBtn">Создать / Поделиться</button>
+        <button id="joinBtn">Присоединиться</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="status">Статус: <span id="statusText">не подключено</span></div>
+      <div id="linkWrap" class="hidden">
+        Ссылка на комнату: <a id="roomLink" href="#">-</a>
+        <button id="copyLink">Копировать</button>
+      </div>
+
+      <section id="game">
+        <div id="boardWrap">
+          <canvas id="board" width="900" height="600"></canvas>
+          <div id="ui">
+            <div id="dice">
+              <button id="rollBtn">Бросить кубы</button>
+              <div id="diceVal">—</div>
+            </div>
+            <div id="turn">Ход: <span id="turnPlayer">—</span></div>
+            <div id="controls">
+              <button id="resetBtn">Сбросить игру</button>
+            </div>
+          </div>
+        </div>
+        <div id="log"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Скрипт использует WebRTC + Firebase Realtime DB для сигналинга. Для публикации — GitHub Pages.</small>
+    </footer>
+  </div>
+
+  <!-- Firebase SDK (подключается с CDN) -->
+  <!-- ВАЖНО: добавь свой Firebase-конфиг в переменную firebaseConfig в app.js -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
