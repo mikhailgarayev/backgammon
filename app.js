@@ -3,7 +3,15 @@
  - Инструкции по созданию проекта и Realtime DB в README.md
 */
 
-let firebaseConfig = null; // <-- ЗДЕСЬ ПОДСТАВЬ СВОЙ CONFIG (см. README)
+const firebaseConfig = {
+  apiKey: "AIzaSyA-UlT-kEx2RPKxGRtmR4rKhPwSrpg6sVE",
+  authDomain: "backgammon-c57ec.firebaseapp.com",
+  databaseURL: "https://backgammon-c57ec-default-rtdb.firebaseio.com",
+  projectId: "backgammon-c57ec",
+  storageBucket: "backgammon-c57ec.firebasestorage.app",
+  messagingSenderId: "856152245696",
+  appId: "1:856152245696:web:863f57ae960cc21af3b425"
+};
 
 // ---------- Инициализация Firebase ----------
 if (!firebaseConfig) {
